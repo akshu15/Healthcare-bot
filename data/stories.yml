@@ -1,0 +1,104 @@
+version: "2.0"
+
+stories:
+
+- story: user greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: user bye
+  steps:
+    - action: utter_goodbye
+
+- story: head main
+  steps:
+    - intent: head_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_head_stomach_symptom
+
+- story: head stomach ache
+  steps:
+    - action: utter_head_stomach_symptom
+    - intent: affirm
+    - action: utter_head_stomach_response
+    - action: utter_did_that_help 
+
+- story: headache area
+  steps:
+    - action: utter_head_stomach_symptom
+    - intent: deny
+    - action: utter_head_symptom
+
+- story: headache whole
+  steps:
+    - intent: head_whole
+    - action: utter_head_whole_response
+    - action: utter_did_that_help 
+
+- story: headache side
+  steps:
+    - intent: head_sides
+    - action: utter_head_sides_response
+    - action: utter_did_that_help
+
+- story: headache crown
+  steps:
+    - intent: head_crown
+    - action: utter_head_crown_response
+    - action: utter_did_that_help
+
+- story: headache eyes
+  steps:
+    - intent: head_eyes
+    - action: utter_head_eyes_response
+    - action: utter_did_that_help
+
+- story: flu
+  steps:
+    - intent: flu_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_flu_response
+    - action: utter_did_that_help
+
+- story: dry vision
+  steps:
+    - intent: vision_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_vision_types
+    - intent: affirm
+    - action: utter_dry_eyes_response
+    - action: utter_did_that_help
+
+- story: allergy vision
+  steps:
+    - intent: vision_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_vision_types
+    - intent: deny
+    - action: utter_allergy_eyes_response
+    - action: utter_did_that_help
+
+- story: gas stomach
+  steps:
+    - intent: stomach_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_stomach_types
+    - intent: affirm
+    - action: utter_gas_response
+    - action: utter_did_that_help
+
+- story: poison stomach
+  steps:
+    - intent: stomach_symptom
+    - action: utter_day
+    - intent: day
+    - action: utter_stomach_types
+    - intent: deny
+    - action: utter_poison_response
+    - action: utter_did_that_help

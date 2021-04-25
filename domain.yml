@@ -1,0 +1,62 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - day
+  - head_symptom
+  - head_whole
+  - head_sides
+  - head_crown
+  - head_eyes
+  - flu_symptom
+  - vision_symptom
+  - stomach_symptom
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hi! How may I help you? Are you facing any of these problems: Headache | Stomache | Flu | Vision"
+  utter_did_that_help:
+  - text: "I hope that this helps you.\n\ If you wish to continue please select which problem: Headache | Stomach-ache | Flu | Vision.\n\ Else you can exit"
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_goodbye:
+  - text: "\n\ Bye"
+  utter_day:
+  - text: "Since when are you experiencing the pain? less than 24 hours | more than 24 hours"
+  utter_head_stomach_symptom:
+  - text: "Are you facing any stomach problems like acid reflux? Yes | No"
+  utter_head_stomach_response:
+  - text: "1. Drink buttermilk 2. Drink Lukewarm water with Lemon 3. Consume apple cider vinegar"
+  utter_head_symptom:
+  - text: "Which area of the head does it hurt the most? Whole | Sides | Crown | Around the eye"
+  utter_head_whole_response:
+  - text: "This often indicates Stress, Daily Routine Change or Acidity.\n\ Following are some remedies for the same :\n\ Stress – 1. Meditate and do breathing exercises 2. Soothe pain with cold compress 3. Take steams\n\ Daily Routine Change – 1. Get Adequate Sleep 2. Avoid direct exposure to sun 3. Stay Hydrated\n\ Acidity – 1. Avoid acidic food 2. Increase fibre intake 3. Have Regular meals"
+  utter_head_sides_response:
+  - text: "This often indicates Migraine or Sinus.\n\ Following are some remedies for the same :\n\ Migraine - 1. Use essential Oils, 2. Try acupressure, 3. Avoid processed food, pickled food or carbonated drinks.\n\ Sinus – 1. Take steam, 2. Use eucalyptus oil, 3. Intake Vitamin C"
+  utter_head_crown_response:
+  - text: "This often indicates Lack of Sleep, Brain freeze or Tension.\n\ Following are some remedies for the same :\n\ Lack of Sleep - 1. Get adequate sleep, 2. Avoid using Electronic device before sleeping.\n\ Brain Freeze - 1. Be in warm environments, 2. Cover your head before going out.\n\ Tension - 1. Relax with Yoga, 2. Drink Water, 3. Dim the lights"
+  utter_head_eyes_response:
+  - text: "This often indicates Change in Eye number or Stress.\n\ Following are some remedies for the same :\n\ Change in Eye number - 1. Get your number checked again, 2. Limit screen time, 3. Take breaks in every 30 minutes.\n\ Stress - 1. Sip Ginger tea, 2. Get a massage, 3. Apply Cold Compress"
+  utter_flu_response:
+  - text: "This often is caused by high fever, headache, muscle aches, cough, runny nose or vomiting sensation.\n\ Following are some remedies for the same :\n\ 1. Get lots of rest 2. Stay hydrated 3. Gargle with salt water for sore throat 4. Wash your hands often with soap and water"
+  utter_vision_types:
+  - text: "1. Did you use contact lenses for a long time?\n\ 2. Had lack of sleep?\n\ 3. Have conditions like arthritis, diabetes or pregnancy? Yes | No"
+  utter_dry_eyes_response:
+  - text: "You have symptoms of Dry Eyes.\n\ It is a common condition that occurs when your tears aren't able to provide adequate lubrication for your eyes.\n\ Following are some remedies for the same :\n\ 1. Artificial tears or other lubricating eye drops, 2. Apply warm compresses 3. Rest your eyes 4. Get more sleep"
+  utter_allergy_eyes_response:
+  - text: "You have symptoms of Eye Allergies.\n\ They occur when the eyes react to allergens such as dust, exposure to sun, bacteria or virus, pollen, smoke or contact lens that irritates them.\n\ Following are some remedies for the same :\n\ 1. Wash your eyes 2. Apply cold compress 3. Stay indoor 4. Apply allergy eye drops"
+  utter_stomach_types:
+  - text: "Are you facing any of the following issues: Bloating, Constipation, Gas? Yes | No"
+  utter_gas_response:
+  - text: "Following are some remedies for the same :\n\ Bloating - 1. Eat at regular intervals, 2. Replace sodas with water 3. Cut down on salt.\n\ Constipation - 1. Drink more water, 2. Increase intake of soluble fibres like oat bran, barley, nuts, seeds as well as some fruits and vegetables 3. Exercise more.\n\ Gas - 1. Sit down during each meal and eat slowly, 2.Avoid soda and other carbonated beverages. 3.Find ways to work exercise into your routine, such as taking a walk after a meal."
+  utter_poison_response:
+  - text: "Following are the remedies for some other causes of Stomach-ache :\n\ Lower Abdomen Pain - 1. Use a heating bag, 2.Reduce your intake of coffee, tea and alcohol as these can make the pain worse. 3.Get plenty of rest.\n\ Vomiting - 1.Eat light, bland foods 2.Avoid fried, greasy, or sweet foods. 3.Eat slowly and eat smaller, more frequent meals.\n\ Loose Motions - 1.Drink ginger juice, 2. Drink lemon and salt water 3. Eat pomegranate"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
